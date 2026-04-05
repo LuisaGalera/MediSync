@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Medi Sync</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="lado-esquerdo">
+        <a href="Login.html" class="voltar">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </a>
+
+        <div class="logo">
+          <img src="Logo MediSync.png" alt="MediSync" />
+        </div>
+
+        <div class="texto">
+          <h1 class="titulo-cadastro">Crie sua conta</h1>
+          <p class="texto-cadastro">
+            Cadastre para gerenciar suas consultas de forma fácil e segura
+          </p>
+          <p class="subtexto-cadastro">
+            Comece a gerenciar sua saúde digital hoje.
+          </p>
+        </div>
+
+        <div class="rodape">
+          <div class="links">
+            <a href="#">Política de privacidade</a>
+            <a href="#">Termos de uso</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lado-direito-cadastro">
+        <div class="texto-verde">
+          <h2>Dados Cadastrais</h2>
+        </div>
+
+        <form action="Home.html" >
+            
+        <div class="form_cadastro">
+          <div class="campo-cadastro">
+            <input type="nome" id="nome" placeholder="Nome completo" />
+          </div>
+
+          <div class="linha-dupla">
+            <div class="campo-cadastro">
+              <input type="text" id="cpf" placeholder="CPF" maxlength="14"/>
+            </div>
+
+            <div class="campo-cadastro">
+              <input
+                type="date"
+                id="data-nascimento"
+                placeholder="Data de nascimento"
+              />
+            </div>
+          </div>
+
+          <div class="campo-cadastro">
+            <select id="genero">
+              <option value="" disabled selected>Gênero</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+              <option value="nao-binario">Não binário</option>
+              <option value="outro">Outro</option>
+              <option value="nao-informar">Prefiro não informar</option>
+            </select>
+
+            <input type="email" id="email" placeholder="Endereço de e-mail" />
+            <input
+              type="text"
+              name="telefone"
+              id="telefone"
+              placeholder="Telefone celular"
+              maxlength="15"
+            />
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Senha"
+            />
+            <input
+              type="password"
+              name="confirmar-senha"
+              id="confirmar-senha"
+              placeholder="Confimar senha"
+            />
+          </div>
+
+          <div class="opcoes">
+              <div class="aceitar">
+                <input type="checkbox" id="aceitar" name="aceitar" />
+                <label for="aceitar">Aceito os <b>Termos de Uso</b> e a <b>Politica de Privacidade</b></label>
+              </div>
+        </div>
+
+        <button type="submit" class="botao-cadastrar" >Criar conta</button>
+
+    </div>
+        </form>
+
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
