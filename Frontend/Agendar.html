@@ -52,7 +52,7 @@
           <select id="especialidade">
             <option value="">Selecione</option>
             <option value="cardiologia">Cardiologia</option>
-            <option value="clinico-geral">Clínico geral</option>
+            <option value="clinico-geral">ClÃ­nico geral</option>
             <option value="dermatologia">Demartologia</option>
             <option value="ginecologia">Ginecologia</option>
             <option value="pediatria">Pediatria</option>
@@ -63,23 +63,17 @@
 
       <div class="linha">
         <div class="campo-agendamento">
-          <label>Plano de Saúde</label><br />
-          <select id="plano-saude">
-            <option value="">Selecione</option>
-            <option value="amil">Amil</option>
-            <option value="bradesco">Bradesco Saúde</option>
-            <option value="hapvida">Hapvida</option>
-            <option value="unimed">Unimed</option>
-          </select>
-        </div>
-
-        <div class="campo-agendamento">
           <label>Data da Consulta</label><br />
           <input
             type="date"
             id="data-consulta"
             placeholder="Selecione a data"
           />
+        </div>
+
+        <div class="campo-agendamento">
+          <label>Horário da Consulta</label><br />
+          <input type="time" id="hora-consulta" value="09:00" />
         </div>
       </div>
       <button type="submit" class="botao-buscar">Buscar Profissionais</button>
@@ -109,7 +103,7 @@
                 <p class="avaliacao">⭐⭐⭐⭐⭐ 4.8</p>
               </div>
 
-              <button class="btn-agendar">Agendar</button>
+              <button class="btn-agendar btn-agendar-destaque">Agendar</button>
             </div>
           </div>
 
@@ -119,11 +113,11 @@
             <div class="conteudo">
               <div class="info">
                 <p class="nome-medico">Dra. Maria</p>
-                <p class="especialidade-medico">Psicóloga</p>
+                <p class="especialidade-medico">Psicologa</p>
                 <p class="avaliacao">⭐⭐⭐⭐⭐ 4.9</p>
               </div>
 
-              <button class="btn-agendar">Agendar</button>
+              <button class="btn-agendar btn-agendar-destaque">Agendar</button>
             </div>
           </div>
 
@@ -137,7 +131,7 @@
                 <p class="avaliacao">⭐⭐⭐⭐⭐ 4.8</p>
               </div>
 
-              <button class="btn-agendar">Agendar</button>
+              <button class="btn-agendar btn-agendar-destaque">Agendar</button>
             </div>
           </div>
 
@@ -151,7 +145,7 @@
                 <p class="avaliacao">⭐⭐⭐⭐⭐ 4.2</p>
               </div>
 
-              <button class="btn-agendar">Agendar</button>
+              <button class="btn-agendar btn-agendar-destaque">Agendar</button>
             </div>
           </div>
         </div>
