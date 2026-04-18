@@ -20,14 +20,18 @@
         <img src="Logo MediSync.png" alt="MediSync" />
       </div>
       <div class="menu">
-        <a href="#"> Início </a>
-        <a href="#"> Minhas consultas</a>
-        <a href="#">Histórico Médico</a>
-        <a href="#">Agendar consultas</a>
+        <a href="Home.html"> Início </a>
+        <a href="Consultas.html"> Minhas consultas</a>
+        <a href="Historico.html">Histórico Médico</a>
+        <a href="Agendar.html">Agendar consultas</a>
       </div>
       <div class="nav-direita">
         <span class="material-symbols-outlined notificacao">notifications</span>
-        <span class="material-symbols-outlined conta-user">account_circle</span>
+        <span
+          class="material-symbols-outlined conta-user"
+          onclick="irParaPerfil()"
+          >account_circle</span
+        >
       </div>
     </nav>
 
@@ -77,11 +81,11 @@
           </div>
 
           <div class="all-consultas">
-            <a href="#">Todas as consultas :)</a>
+            <a href="Consultas.html">Todas as consultas :)</a>
           </div>
         </div>
 
-        <div class="nova-consulta">
+        <div class="nova-consulta" onclick="irParaConsulta()">
           <span class="material-symbols-outlined agendar">calendar_month</span>
           <div class="texto-agendar">
             <p>Agendar</p>
@@ -125,7 +129,7 @@
             <span class="tempo-passado">Há 2 dias</span>
           </div>
         </div>
-        <div class="historico">
+        <div class="historico" onclick="irParaHistorico()">
           <span class="material-symbols-outlined livro">book_2 </span>
           <div class="historico-texto">
             <p>Acessar</p>
@@ -134,5 +138,6 @@
         </div>
       </div>
     </div>
+    <script src="javascript.js" defer></script>
   </body>
 </html>

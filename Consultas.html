@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultas</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Source+Serif+4:ital,wght@0,200..900;1,200..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-esquerda">
+        <img src="Logo MediSync.png" alt="MediSync" />
+      </div>
+
+      <div class="menu">
+        <a href="Home.html">Início</a>
+        <a href="Consultas.html">Minhas consultas</a>
+        <a href="Historico.html">Histórico Médico</a>
+        <a href="Agendar.html">Agendar Consulta</a>
+      </div>
+
+      <div class="nav-direita">
+        <span class="material-symbols-outlined notificacao">notifications</span>
+        <span
+          class="material-symbols-outlined conta-user"
+          onclick="irParaPerfil()"
+          >account_circle</span
+        >
+      </div>
+    </nav>
+    <h2 class="titulo-minhas-consultas">Consultas</h2>
+
+    <form class="filtro-consultas">
+      <div class="linha">
+        <div class="campo-consultas">
+          <label for="status">Status da Consulta</label>
+          <select id="status">
+            <option value="">Todas consultas</option>
+            <option value="cancelada">Cancelada</option>
+            <option value="agendada">Agendada</option>
+            <option value="realizada">Realizada</option>
+          </select>
+        </div>
+        <div class="campo-consultas">
+          <label for="periodo-consulta">Período</label>
+          <select id="periodo-consulta">
+            <option value="">Qualquer período</option>
+            <option value="7">Próximos 7 dias</option>
+            <option value="30">Próximos 30 dias</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="botao-consultas">Filtrar</button>
+    </form>
+    <div class="lista-consultas"></div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
