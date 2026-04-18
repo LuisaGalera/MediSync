@@ -9,10 +9,10 @@ Projeto desenvolvido para o Projeto Integrador.
 * Execute o script localizado em `/database/schema.sql` para criar as tabelas e índices.
 
 ### 2. Back-end (Node.js)
-* Acesse a pasta `/backend`.
+* Acesse a pasta `/backend`.(cd medi-sync-backend)
 * Abra o arquivo `.env` e adicione suas credenciais do banco.
 * Instale as dependências: `npm install`
 * Inicie o servidor: `npm start`
 
 ### 3. Front-end
-* Abra o arquivo `frontend/Cadastro.html` no seu navegador.
+* Abra o arquivo `frontend/Login.html` no seu navegador.
