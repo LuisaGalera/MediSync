@@ -761,7 +761,6 @@ async function configurarPerfil() {
 
   const campos = buscarCampoPerfil();
   if (!campos.salvar) return;
-
   const usuario = obterUsuarioSessao() || {};
   const paciente = await carregarPaciente(true);
   const cadastroLocal = obterDadosCadastraisLocais() || {};
@@ -770,6 +769,7 @@ async function configurarPerfil() {
   if (campos.dataNascimento)
     campos.dataNascimento.value =
       paciente?.data_nascimento || cadastroLocal.data_nascimento || "";
+
   bloquearCampo(campos.cpf, cadastroLocal.cpf || "");
   bloquearCampo(campos.genero, cadastroLocal.genero || "");
   bloquearCampo(campos.telefone, cadastroLocal.telefone || "");
@@ -784,37 +784,46 @@ async function configurarPerfil() {
     paciente?.preferencia_notificacao || "email",
   );
 
-  campos.salvar.addEventListener("click", async () => {
-    const usuarioLogado = obterUsuarioSessao();
-    if (!usuarioLogado?.id) {
-      alert("Faça login novamente para atualizar os dados do paciente.");
-      return;
-    }
+  // --- AQUI ESTÁ A CORREÇÃO PRINCIPAL ---
+  // Em vez de escutar o 'click' no botão, capturamos o 'submit' do FORMULÁRIO inteiro
+  const formularioPerfil = document.querySelector(".perfil-form");
 
-    const preferenciaMarcada = campos.checkboxes.find(
-      (checkbox) => checkbox.checked,
-    );
-    const preferenciaTexto = preferenciaMarcada
-      ? preferenciaMarcada.parentElement.textContent.trim().toLowerCase()
-      : "email";
+  if (formularioPerfil) {
+    formularioPerfil.addEventListener("submit", async (event) => {
+      // 1. Impede terminantemente a página de recarregar ou piscar/mudar de tamanho
+      event.preventDefault();
 
-    try {
-      const resposta = await requisicaoApi(`/pacientes/${usuarioLogado.id}`, {
-        method: "PUT",
-        body: {
-          data_nascimento:
-            campos.dataNascimento?.value || paciente?.data_nascimento || null,
-          convenio: paciente?.convenio || "",
-          preferencia_notificacao: preferenciaTexto,
-        },
-      });
+      const usuarioLogado = obterUsuarioSessao();
+      if (!usuarioLogado?.id) {
+        alert("Faça login novamente para atualizar os dados do paciente.");
+        return;
+      }
 
-      salvarPaciente(resposta.paciente);
-      alert("Os campos disponíveis no back-end original foram atualizados.");
-    } catch (error) {
-      alert(error.message);
-    }
-  });
+      const preferenciaMarcada = campos.checkboxes.find(
+        (checkbox) => checkbox.checked,
+      );
+      const preferenciaTexto = preferenciaMarcada
+        ? preferenciaMarcada.parentElement.textContent.trim().toLowerCase()
+        : "email";
+
+      try {
+        const resposta = await requisicaoApi(`/pacientes/${usuarioLogado.id}`, {
+          method: "PUT",
+          body: {
+            data_nascimento:
+              campos.dataNascimento?.value || paciente?.data_nascimento || null,
+            convenio: paciente?.convenio || "",
+            preferencia_notificacao: preferenciaTexto,
+          },
+        });
+
+        salvarPaciente(resposta.paciente);
+        alert("Os campos disponíveis no back-end original foram atualizados.");
+      } catch (error) {
+        alert(error.message);
+      }
+    });
+  }
 }
 
 async function configurarHome() {
@@ -939,4 +948,3 @@ async function iniciarAplicacao() {
 }
 
 document.addEventListener("DOMContentLoaded", iniciarAplicacao);
-

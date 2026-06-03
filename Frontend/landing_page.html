@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediSync</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar-landing">
+      <div class="nav-bar-landing-esquerda">
+        <div class="Logo">
+          <img src="Logo MediSync verde.png" alt="MediSync" />
+        </div>
+      </div>
+
+      <div class="menu-landing">
+        <a class="landing-link" href="#features">Recurso</a>
+        <a class="landing-link" href="#pricing">Planos</a>
+        <button
+          class="button-login"
+          onclick="window.location.href = 'Login.html'"
+        >
+          Login
+        </button>
+      </div>
+    </nav>
+    <main class="hero-container">
+      <div class="hero-esquerda">
+        <h1 class="hero-titulo">Sua Saúde em<br />Primeiro Lugar</h1>
+
+        <p class="hero-subtitulo">
+          MediSync é uma plataforma moderna de gerenciamento de saúde que
+          conecta pacientes e profissionais de saúde de forma segura e
+          intuitiva.
+        </p>
+
+        <div class="hero-acoes">
+          <button
+            class="btn-comecar"
+            onclick="window.location.href = 'Cadastro.html'"
+          >
+            Começar Agora
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+          <button
+            class="btn-saiba-mais"
+            onclick="window.location.href = '#recursos'"
+          >
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-direita">
+        <div class="imagem-container">
+          <img
+            src="medisync-hero-professional.png"
+            alt="Profissionais MediSync"
+            class="img-landing"
+          />
+        </div>
+      </div>
+    </main>
+
+    <div id="features" class="container-recurso">
+      <div class="texto-recurso">
+        <h2>Principais Recursos</h2>
+        <p>
+          Tudo que você precisa para gerenciar sua saúde de forma eficiente e
+          segura
+        </p>
+      </div>
+
+      <div class="recursos-grid">
+        <div class="card-recurso">
+          <div class="icone-recurso-wrapper">
+            <span class="material-symbols-outlined">calendar_month</span>
+          </div>
+          <h3>Agendamento de Consultas</h3>
+          <p>
+            Marque, remarcação ou gerencie suas consultas com facilidade através
+            de nossa interface intuitiva.
+          </p>
+        </div>
+
+        <div class="card-recurso">
+          <div class="icone-recurso-wrapper">
+            <span class="material-symbols-outlined">notifications</span>
+          </div>
+          <h3>Notificações Inteligentes</h3>
+          <p>
+            Receba alertas oportunos, lembretes e updates importantes sobre suas
+            consultas.
+          </p>
+        </div>
+
+        <div class="card-recurso">
+          <div class="icone-recurso-wrapper">
+            <span class="material-symbols-outlined">folder_shared</span>
+          </div>
+          <h3>Histórico Médico Centralizado</h3>
+          <p>
+            Encontre receitas, exames, diagnósticos e todo o seu histórico de
+            atendimentos organizados em um só lugar.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="pricing" class="container-planos">
+      <div class="texto-planos">
+        <h2>Planos Simples e Transparentes</h2>
+        <p>Escolha o plano perfeito para suas necessidades</p>
+      </div>
+
+      <div class="planos-grid">
+        <div class="card-plano">
+          <div class="plano-info">
+            <h3>Básico</h3>
+            <div class="plano-preco">Gratuito</div>
+            <p class="plano-descricao">Para começar sua jornada de saúde</p>
+          </div>
+          <button class="btn-plano-vazado">Começar Agora</button>
+          <ul class="plano-beneficios">
+            <li>Agendamento de consultas</li>
+            <li>Histórico de consultas</li>
+            <li>Notificações básicas</li>
+            <li>Suporte por email</li>
+          </ul>
+        </div>
+
+        <div class="card-plano popular">
+          <div class="tag-popular">Mais Popular</div>
+          <div class="plano-info">
+            <h3>Premium</h3>
+            <div class="plano-preco">R$ 29,90<span class="mes">/mês</span></div>
+            <p class="plano-descricao">Para gerenciamento completo de saúde</p>
+          </div>
+          <button class="btn-plano-preenchido">Começar Agora</button>
+          <ul class="plano-beneficios">
+            <li>Tudo do plano Básico</li>
+            <li>Análise de métricas avançada</li>
+            <li>Suporte prioritário</li>
+            <li>Relatórios personalizados</li>
+          </ul>
+        </div>
+
+        <div class="card-plano">
+          <div class="plano-info">
+            <h3>Profissional</h3>
+            <div class="plano-preco">R$ 99,90<span class="mes">/mês</span></div>
+            <p class="plano-descricao">Para profissionais de saúde</p>
+          </div>
+          <button class="btn-plano-vazado">Começar Agora</button>
+          <ul class="plano-beneficios">
+            <li>Tudo do plano Premium</li>
+            <li>Gerenciamento de múltiplos pacientes</li>
+            <li>Integração com prontuário eletrônico</li>
+            <li>API de integração</li>
+            <li>Suporte 24/7</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

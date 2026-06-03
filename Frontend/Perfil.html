@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -37,72 +36,65 @@
         >
       </div>
     </nav>
+
     <div class="perfil-container">
       <h1 class="titulo-perfil">Meu Perfil</h1>
 
-      <div class="perfil-topo">
-        <div class="avatar-perfil">
-          <span class="material-symbols-outlined icone-user">
-            account_circle
-          </span>
-
-          <span class="material-symbols-outlined icone-editar"> edit </span>
-        </div>
-
-        <div class="dados-pessoais">
-          <h2>Dados pessoais</h2>
-
-          <input type="text" placeholder="Nome Completo" />
-          <input type="date" />
-
-          <div class="linha">
-            <input type="text" placeholder="CPF" />
-            <select>
-              <option>Gênero</option>
-              <option>Feminino</option>
-              <option>Masculino</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="perfil-meio">
-        <div class="bloco">
-          <h2>Informações de contato</h2>
-
-          <input type="text" placeholder="Telefone celular" />
-          <input type="email" placeholder="Endereço de e-mail" />
-
-          <h2>Endereço</h2>
-
-          <input type="text" placeholder="Rua / Avenida" />
-
-          <div class="linha">
-            <input type="text" placeholder="Número" />
-            <input type="text" placeholder="CEP" />
+      <form class="perfil-form">
+        <div class="perfil-card perfil-topo">
+          <div class="avatar-perfil">
+            <span class="material-symbols-outlined icone-user"
+              >account_circle</span
+            >
+            <span class="material-symbols-outlined icone-editar">edit</span>
           </div>
 
-          <input type="text" placeholder="Bairro" />
+          <div class="dados-pessoais form-group-container">
+            <h2>Dados pessoais</h2>
+            <div class="input-row">
+              <input
+                type="text"
+                placeholder="Nome Completo"
+                class="input-flex-3"
+              />
+              <input type="date" class="input-flex-1" />
+            </div>
+          </div>
         </div>
 
-        <div class="bloco">
-          <h2>Segurança da conta</h2>
+        <div class="perfil-card perfil-meio">
+          <div class="bloco form-group-container">
+            <h2>Informações de contato</h2>
+            <div class="input-row stack-mobile">
+              <input type="text" placeholder="Telefone celular" />
+              <input type="emailperfil" placeholder="Endereço de e-mail" />
+            </div>
+          </div>
+        </div>
 
-          <button class="btn-secundario">Alterar senha</button>
-
-          <h2 class="Preferência">Preferência de notificação</h2>
-
-          <div class="checkbox-group">
-            <label><input type="checkbox" /> Whatsapp</label>
-            <label><input type="checkbox" /> E-mail</label>
-            <label><input type="checkbox" /> SMS</label>
-            <label><input type="checkbox" /> Outro</label>
+        <div class="perfil-card grid-dois-lados">
+          <div class="bloco seguranca-col">
+            <h2>Segurança da conta</h2>
+            <button type="button" class="btn-secundario">Alterar senha</button>
           </div>
 
-          <button class="btn-salvar">Salvar</button>
+          <div class="bloco notificacoes-col">
+            <h2 class="Preferência">Preferência de notificação</h2>
+            <div class="checkbox-group">
+              <label><input type="checkbox" /> Whatsapp</label>
+              <label><input type="checkbox" /> E-mail</label>
+              <label><input type="checkbox" /> SMS</label>
+              <label><input type="checkbox" /> Outro</label>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="actions-container">
+          <button type="submit" class="btn-salvar">Salvar</button>
+        </div>
+      </form>
     </div>
+
     <script src="javascript.js" defer></script>
   </body>
 </html>
